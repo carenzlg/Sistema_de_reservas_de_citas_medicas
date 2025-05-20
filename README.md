@@ -51,7 +51,7 @@ La clinica san vicente fundacion necesita un sistema para gestionar las citas m�
 	•	¿Cuántas citas fueron canceladas la última semana?
 
 
- ##Diagrama E/R
+ ## Diagrama E/R
 ![Diagrama E_R Carenzlg](https://github.com/user-attachments/assets/c438f63c-6599-4d17-94c7-a79181a4691b)
 
 

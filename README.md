@@ -1,18 +1,19 @@
 # Sistema_de_reservas_de_citas_medicas
 La clinica san vicente fundacion necesita un sistema para gestionar las citas médicas de sus pacientes. El objetivo es facilitar la programación, evitar cruces de horarios y llevar un control claro del historial de atención de cada paciente y médico.
+
 🎯 Objetivos del sistema:
 
-    Registrar pacientes y médicos en una base de datos.
+    Registrar pacientes, médicos, especialidades y enfermedades.
 
-    Asociar médicos con sus especialidades.
+    Permitir que los pacientes reserven citas médicas con control de disponibilidad.
 
-    Permitir que los pacientes reserven citas médicas.
-
-    Controlar la disponibilidad de los médicos por fecha y hora.
+    Registrar consultorios y tipos de cita.
 
     Registrar y actualizar el estado de cada cita (Programada, Cancelada, Atendida).
 
     Consultar el historial de citas por paciente y médico.
+
+    Asociar enfermedades al historial de cada paciente.
 
 🧱 Entidades y atributos:
 1. Paciente
@@ -59,17 +60,63 @@ La clinica san vicente fundacion necesita un sistema para gestionar las citas m�
 
     IDMédico (FK)
 
+    IDConsultorio (FK)
+
+    IDTipoCita (FK)
+
+5. Consultorio
+
+    IDConsultorio (PK)
+
+    Número
+
+    Piso
+
+    Tipo
+
+6. TipoCita
+
+    IDTipoCita (PK)
+
+    Nombre (Consulta, Control, Urgencia, etc.)
+
+    Descripción
+
+7. Enfermedad
+
+    IDEnfermedad (PK)
+
+    Nombre
+
+    Descripción
+
+    Tipo (crónica, aguda, etc.)
+
+    IDPaciente (FK)
+
+    FechaDiagnostico
+
+    Estado (activa, controlada, superada)
+
 🔄 Relaciones:
 
     Un paciente puede tener muchas citas.
 
     Un médico puede atender muchas citas.
 
-    Cada cita relaciona un paciente con un médico.
+    Una cita relaciona un paciente con un médico.
 
     Cada médico pertenece a una única especialidad.
 
     Una especialidad puede tener varios médicos.
+
+    Una cita se realiza en un consultorio.
+
+    Una cita tiene un tipo definido.
+
+    Un paciente puede tener varias enfermedades registradas.
+
+    Una enfermedad pertenece a un solo paciente (relación 1:N).
 
 📋 Reglas de negocio:
 
@@ -83,7 +130,7 @@ La clinica san vicente fundacion necesita un sistema para gestionar las citas m�
 
 🔍 Consultas posibles en el sistema:
 
-    ¿Cuántas citas tiene el Dr. x programadas esta semana?
+    ¿Cuántas citas tiene el Dr. Pérez programadas esta semana?
 
     ¿Qué pacientes han sido atendidos en el área de Dermatología este mes?
 
@@ -91,6 +138,7 @@ La clinica san vicente fundacion necesita un sistema para gestionar las citas m�
 
     ¿Cuántas citas fueron canceladas la última semana?
 
+    
  ## Diagrama E/R
  ![Diagrama E_R Carenzlg](https://github.com/user-attachments/assets/98f85fe4-cb47-48d7-be33-43ce6af5cf8f)
 

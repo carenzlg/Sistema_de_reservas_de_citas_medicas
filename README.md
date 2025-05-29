@@ -145,6 +145,8 @@ La clinica san vicente fundacion necesita un sistema para gestionar las citas m�
 ## Diseño lógico
 ![sistema_de_reservas_de_citas_medicas_1 3](https://github.com/user-attachments/assets/1641b9e4-178b-4984-bf2e-a6693c498640)
 
+## Modelo físico
+<img width="797" alt="image" src="https://github.com/user-attachments/assets/c22c8048-ea00-4bb0-8ea1-51ab7cabd554" />
 
 
 

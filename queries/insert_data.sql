@@ -100,6 +100,8 @@ VALUES ('1045016998','Caren Zuluaga','F','2005-02-09','3223966554','carenzlg52@g
 ('1045678925', 'Julián Arango', 'M', '1987-07-14', '3234567890', 'julian.arango@hotmail.com', 'Guarne', 'Carrera 2 #3-11');
 
 DBCC CHECKIDENT ('paciente', RESEED, 0);
+
+
 DELETE FROM paciente;
 
 SELECT*FROM enfermedad;

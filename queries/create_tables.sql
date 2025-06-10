@@ -10,6 +10,11 @@ CREATE TABLE consultorio (
     piso VARCHAR (25) NOT NULL
 );
 
+ALTER TABLE consultorio ADD nombre_consultorio VARCHAR(100) NOT NULL;
+
+AlTER TABLE consultorio ADD numero_consultorio INT NOT NULL;
+
+
 
 CREATE TABLE tipo_cita (
 id INT IDENTITY (1,1) PRIMARY KEY,
@@ -34,6 +39,7 @@ cuidad VARCHAR (100) NULL,
 direccion VARCHAR (200) NULL
 );
 
+
 SELECT*FROM paciente;
 
 CREATE TABLE paciente_enfermedad (
@@ -45,6 +51,7 @@ CREATE TABLE paciente_enfermedad (
     FOREIGN KEY (id_paciente) REFERENCES paciente(id),
     FOREIGN KEY (id_enfermedad) REFERENCES enfermedad (id)
 );
+
 
 CREATE TABLE medico(
 id INT IDENTITY (1,1) PRIMARY KEY,
@@ -78,8 +85,6 @@ EXEC sp_rename 'paciente.cuidad', 'ciudad', 'COLUMN';
 SELECT*FROM paciente;
 
 ALTER TABLE consultorio ADD nombre_consultorio VARCHAR(100) NOT NULL;
-
-SELECT*FROM consultorio;
 
 AlTER TABLE consultorio ADD numero_consultorio INT NOT NULL;
 
